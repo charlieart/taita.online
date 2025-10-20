@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taita Online — Estilo Manga</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <script defer src="scripts/main.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Comic+Neue:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo"><img src="assets/logo.svg" alt="Taita Online Logo" /></div>
+    <nav class="nav" id="nav-menu">
+      <ul>
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#coleccion">Colección</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger">☰</button>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>Vive el espíritu del manga</h1>
+      <p>Diseños inspirados en tus series favoritas — estilo y pasión otaku.</p>
+      <button class="btn">Explorar</button>
+    </div>
+    <img src="assets/hero.svg" alt="Panel Manga" class="hero-img" />
+  </section>
+
+  <section class="coleccion" id="coleccion">
+    <h2>Nuestra Colección</h2>
+    <input type="text" id="search" placeholder="Buscar producto..." />
+    <div class="cards" id="product-list">
+      <div class="card" data-category="polos">
+        <img src="assets/product1.webp" alt="Producto 1" />
+        <h3>Polera Shonen</h3>
+        <p>Inspirada en héroes de acción.</p>
+        <button class="ver-detalle" data-id="1">Ver más</button>
+      </div>
+      <div class="card" data-category="tazas">
+        <img src="assets/product2.webp" alt="Producto 2" />
+        <h3>Taza Kawaii</h3>
+        <p>Perfecta para tus mañanas anime.</p>
+        <button class="ver-detalle" data-id="2">Ver más</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Taita Online — Todos los derechos reservados.</p>
+    <div class="redes">
+      <a href="#">Instagram</a> | <a href="#">Facebook</a>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" id="close-modal">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+</body>
+</html>

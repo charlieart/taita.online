@@ -1,0 +1,12 @@
+# Instrucciones para publicar en GitHub Pages
+
+1. Crea un nuevo repositorio llamado "taita.online".
+2. Ejecuta en tu terminal:
+   git init
+   git add .
+   git commit -m "feat: sitio manga inicial — listo para GitHub Pages"
+   git branch -M main
+   git remote add origin https://github.com/TU_USUARIO/taita.online.git
+   git push -u origin main
+3. En GitHub → Settings → Pages → selecciona main / root.
+4. Accede a https://TU_USUARIO.github.io/taita.online/
