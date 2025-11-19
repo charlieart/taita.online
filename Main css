@@ -1,0 +1,211 @@
+:root {
+    --bg-color: #0e0e0e;
+    --text-color: #f4f4f4;
+    --accent-color: #cfcfcf;
+    --font-title: 'Syne', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    overflow-x: hidden; /* Importante para no romper el scroll horizontal */
+}
+
+/* Preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    color: #000;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-title);
+    font-size: 4rem;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    mix-blend-mode: difference; /* Efecto cool sobre imágenes claras */
+}
+
+.logo {
+    font-family: var(--font-title);
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-img-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    transform: scale(1.2); /* Para animación inicial */
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-family: var(--font-title);
+    font-size: clamp(3rem, 10vw, 8rem); /* Responsivo gigante */
+    line-height: 0.9;
+    text-transform: uppercase;
+    overflow: hidden; /* Para el efecto de revelar texto */
+}
+
+.hero-sub {
+    margin-top: 20px;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+/* Marquee */
+.marquee-section {
+    padding: 40px 0;
+    background: var(--text-color);
+    color: var(--bg-color);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-inner {
+    display: inline-block;
+    font-family: var(--font-title);
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* Gallery Section (Scroll Horizontal) */
+.gallery-section {
+    height: 100vh; /* Ocupa toda la pantalla mientras scrolleamos */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding-left: 5vw;
+}
+
+.gallery-intro {
+    margin-bottom: 2rem;
+}
+
+.gallery-intro h2 {
+    font-family: var(--font-title);
+    font-size: 3rem;
+}
+
+.horizontal-wrapper {
+    display: flex;
+    gap: 40px;
+    width: max-content; /* Permite que crezca horizontalmente */
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    filter: grayscale(100%);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.card h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: #fff;
+    z-index: 2;
+}
+
+/* Footer */
+.footer {
+    height: 50vh;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer h2 {
+    font-family: var(--font-title);
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.socials a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    border: 1px solid var(--text-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.socials a:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
